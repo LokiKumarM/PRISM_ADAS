@@ -2,6 +2,10 @@
 
 > A Cognitive Reasoning Layer for Advanced Driver-Assistance Systems — one that takes perception outputs and *explains* the driving decisions it makes.
 
+**[▶ Try the live demo on Hugging Face Spaces](https://huggingface.co/spaces/Lokikumar/PRISM_ADAS)**
+
+[![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-md.svg)](https://huggingface.co/spaces/Lokikumar/PRISM_ADAS)
+
 ---
 
 ## Objective
@@ -148,19 +152,29 @@ PRISM_ADAS/
 
 ## Quick start
 
-### 1. Install dependencies
+### Try it without installing anything
+
+The app is hosted on Hugging Face Spaces:
+
+**→ [huggingface.co/spaces/Lokikumar/PRISM_ADAS](https://huggingface.co/spaces/Lokikumar/PRISM_ADAS)**
+
+Pick a scene from the dropdown and the BEV plot + Reasoned Alert panel render against the bundled nuScenes Mini JSON. Nothing to install locally.
+
+### Or run it locally
+
+#### 1. Install dependencies
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-### 2. Provide the nuScenes Mini JSON tables
+#### 2. Provide the nuScenes Mini JSON tables
 
 Place the 13 JSON files (`attribute.json`, `calibrated_sensor.json`, `category.json`, `ego_pose.json`, `instance.json`, `log.json`, `map.json`, `sample.json`, `sample_annotation.json`, `sample_data.json`, `scene.json`, `sensor.json`, `visibility.json`) under either `./nuscenes-mini-JSON/` or `./nuscenes-mini-JSON/v1.0-mini/`. The loader auto-detects either layout.
 
 > **No sensor files are required.** This project reads only the 13 JSONs. There are no `.jpg`, `.pcd`, or `.bin` reads anywhere in the codebase.
 
-### 3. Run the Streamlit demo
+#### 3. Run the Streamlit demo
 
 ```bash
 streamlit run app.py
@@ -170,7 +184,7 @@ Pick a scene from the dropdown. The page shows:
 - a dark BEV plot of the scene (ego at origin, objects coloured by class, ego/adjacent-lane bands shaded, pedestrian caution/stop radii dashed); and
 - the **Reasoned Alert from PRISM layer** panel with CONTEXT / RISK / ACTION / REASON locked to the same height.
 
-### 4. Inspect a scene from the CLI
+#### 4. Inspect a scene from the CLI
 
 ```bash
 python -m src.pipeline ./nuscenes-mini-JSON 0 6
@@ -178,7 +192,7 @@ python -m src.pipeline ./nuscenes-mini-JSON 0 6
 
 Prints the detailed per-frame justification trace (perception, step-by-step reasoning, alternatives considered, confidence) for the first 6 frames of scene 0.
 
-### 5. Run the tests
+#### 5. Run the tests
 
 ```bash
 python -m pytest tests/ -q
