@@ -274,4 +274,4 @@ The interface between the perception stack, the reasoning layer, and the HMI is 
 ## Acknowledgements
 
 - **nuScenes** (Aptiv / Motional) for the Mini dataset annotations used as the validation corpus.
-- The rule definitions and threshold defaults are spelled out in `SKILL.md` and `config/rules.yaml`; everything else is built on top of `numpy`, `matplotlib`, `pyquaternion`, `pyyaml`, `streamlit`, and `pandas` only.
+- The rule definitions and threshold defaults are spelled out in `config/rules.yaml`; everything else is built on top of `numpy`, `matplotlib`, `pyquaternion`, `pyyaml`, `streamlit`, and `pandas` only.
