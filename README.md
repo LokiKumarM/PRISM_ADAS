@@ -118,7 +118,6 @@ Six action classes are supported end-to-end: **BRAKE, STOP, YIELD, FOLLOW, INHIB
 ```
 PRISM_ADAS/
 ├── README.md
-├── SKILL.md                       full functional spec
 ├── requirements.txt               streamlit, numpy, matplotlib, pyquaternion, pyyaml, pandas
 ├── app.py                         Streamlit demo (BEV + Reasoned Alert)
 ├── config/
