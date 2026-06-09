@@ -1,0 +1,9 @@
+lane_half_width_m: 1.75
+adjacent_lane_max_m: 5.25
+follow_distance_m: 40.0
+brake_distance_m: 12.0
+brake_ttc_s: 2.5
+ped_caution_radius_m: 15.0
+ped_stop_radius_m: 8.0
+min_lidar_pts: 2
+min_visibility: 1

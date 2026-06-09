@@ -1,0 +1,41 @@
+# Maps raw nuScenes category names → simplified class used by the reasoning core.
+# Anything not listed falls back to `default`.
+categories:
+  vehicle.car: VEHICLE
+  vehicle.motorcycle: VEHICLE
+  vehicle.emergency.ambulance: VEHICLE
+  vehicle.emergency.police: VEHICLE
+  vehicle.truck: LARGE_VEHICLE
+  vehicle.bus.bendy: LARGE_VEHICLE
+  vehicle.bus.rigid: LARGE_VEHICLE
+  vehicle.trailer: LARGE_VEHICLE
+  vehicle.construction: LARGE_VEHICLE
+  vehicle.bicycle: CYCLIST
+  human.pedestrian.adult: PEDESTRIAN
+  human.pedestrian.child: PEDESTRIAN
+  human.pedestrian.wheelchair: PEDESTRIAN
+  human.pedestrian.stroller: PEDESTRIAN
+  human.pedestrian.personal_mobility: PEDESTRIAN
+  human.pedestrian.police_officer: PEDESTRIAN
+  human.pedestrian.construction_worker: PEDESTRIAN
+  movable_object.barrier: STATIC
+  movable_object.trafficcone: STATIC
+  movable_object.pushable_pullable: STATIC
+  movable_object.debris: STATIC
+  animal: STATIC
+  static_object.bicycle_rack: STATIC
+
+# Maps raw nuScenes attribute names → simplified state.
+# Objects with no attribute get `default`.
+attributes:
+  vehicle.moving: MOVING
+  vehicle.stopped: STOPPED
+  vehicle.parked: PARKED
+  pedestrian.moving: MOVING
+  pedestrian.standing: STANDING
+  pedestrian.sitting_lying_down: STANDING
+  cycle.with_rider: MOVING
+  cycle.without_rider: STANDING
+
+default_category: STATIC
+default_state: STANDING
